@@ -7,7 +7,7 @@
 
 #include "geo_names.hpp"
 
-inline const std::optional<GeoNames> ImGuiGeoNames(char* fuzzy, int count, int maxResults = 8)
+inline std::optional<GeoNames> ImGuiGeoNames(char* fuzzy, int count, int maxResults = 8)
 {
     thread_local std::vector<GeoNames> results;
     if (ImGui::InputText("Location", fuzzy, count))

@@ -50,7 +50,7 @@ static std::string GetQuery(const std::string_view& fuzzy)
     };
     for (const char c : fuzzy)
     {
-        if (std::isalnum(c))
+        if (std::isalnum(static_cast<unsigned char>(c)))
         {
             token += c;
         }
