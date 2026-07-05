@@ -1,16 +1,14 @@
 #pragma once
 
-#include <span>
 #include <string>
 #include <string_view>
+#include <vector>
 
-struct GeoNamesRegion
+struct GeoNames
 {
     std::string Location;
-    float MinLatitude;
-    float MinLongitude;
-    float MaxLatitude;
-    float MaxLongitude;
+    float Latitude;
+    float Longitude;
 };
 
-void GeoNamesFindRegion(std::vector<GeoNamesRegion>& regions, const std::string_view& prompt);
+void GetGeoNames(std::vector<GeoNames>& results, int maxResults, const std::string_view& fuzzy);
