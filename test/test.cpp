@@ -1,6 +1,4 @@
 #include <cstdio>
-#include <string>
-#include <vector>
 
 #include "geo_names.hpp"
 
